@@ -1,0 +1,21 @@
+services:
+  moisture_backend:
+    build:
+      context: ./backend
+    container_name: moisture_backend
+    restart: unless-stopped
+    environment:
+      API_TOKEN: abc1234
+      DB_HOST: 192.168.86.35
+      DB_PORT: 5432
+      DB_NAME: HomeControlDB
+      DB_USER: tuan11ps
+      DB_PASSWORD: home!control1989
+    ports:
+      - "8000:8000"
+    networks:
+      - postgres-server_default
+
+networks:
+  postgres-server_default:
+    external: true
