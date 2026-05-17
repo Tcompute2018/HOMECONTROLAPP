@@ -6,7 +6,7 @@ frontend/.env.local
 
 # backend
 backend/__pycache__/
-backend/*.pyc
+backend/*.pycg
 
 # system
 .DS_Store
